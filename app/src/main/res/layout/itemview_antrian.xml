@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_shape"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/txtNoAntrian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:text="A101"
+        android:textSize="45dp" />
+
+    <TextView
+        android:id="@+id/txtNamaKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtNoAntrian"
+        android:layout_centerHorizontal="true"
+        android:text="Klinik THT"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtNamaKlinik"
+        android:layout_below="@+id/txtNamaKlinik"
+        android:text="dr. Arif Purnanta" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtNoAntrian"
+        android:layout_alignEnd="@+id/textView50"
+        android:text="Sisa Antrian : 10" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView52"
+        android:layout_below="@+id/txtNoAntrian"
+        android:text="Estimasi waktu dipanggil : 09.00" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtNoAntrian"
+        android:layout_below="@+id/txtNoAntrian"
+        android:layout_marginEnd="28dp"
+        android:text="Tunggu" />
+</RelativeLayout>

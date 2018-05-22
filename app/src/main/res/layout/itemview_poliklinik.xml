@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgPoli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/ic_clinic" />
+
+    <TextView
+        android:id="@+id/txtKlinik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgPoli"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/imgPoli"
+        android:text="Klinik 1" />
+
+    <ImageView
+        android:id="@+id/imgNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtKlinik"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="39dp"
+        app:srcCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtKlinik"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorAccent" />
+
+</RelativeLayout>

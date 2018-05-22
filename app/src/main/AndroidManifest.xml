@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="skripsi.dita.antrianklinik">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Splash screen -->
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity -->
+        <activity android:name=".Login" />
+        <activity
+            android:name=".NavMenu"
+            android:label="@string/title_activity_nav_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DaftarAkun" />
+        <activity android:name=".Pendaftaran" />
+        <activity android:name=".JadwalDokter" />
+        <activity android:name=".ResumePendaftaran" />
+        <activity android:name=".DetailJadwal" />
+        <activity android:name=".UbahPassword" />
+        <activity android:name=".DaftarAntrian" />
+        <activity
+            android:name=".BottomNavMenu"
+            android:label="@string/title_activity_bottom_nav_menu" />
+        <activity android:name=".DetailAntrian"></activity>
+    </application>
+
+</manifest>

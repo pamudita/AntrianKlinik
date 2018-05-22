@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_beranda"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_white"
+        android:title="Beranda"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_jadwal"
+        android:enabled="true"
+        android:icon="@drawable/ic_schedule_wh"
+        android:title="Jadwal"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_pendaftaran"
+        android:enabled="true"
+        android:icon="@drawable/ic_assignment_white"
+        android:title="Pendaftaran"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_antrian"
+        android:enabled="true"
+        android:icon="@drawable/ic_people_white"
+        android:title="Antrian"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_profil"
+        android:enabled="true"
+        android:icon="@drawable/ic_people_white"
+        android:title="Antrian"
+        app:showAsAction="ifRoom"/>
+
+</menu>
