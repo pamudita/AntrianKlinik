@@ -1,16 +1,25 @@
 package skripsi.dita.antrianklinik;
 
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import skripsi.dita.antrianklinik.model.Klinik;
+import skripsi.dita.antrianklinik.model.User;
+import skripsi.dita.antrianklinik.service.ApiService;
 
 public class JadwalDokter extends AppCompatActivity {
     private List<Klinik> klinikList = new ArrayList<>();
@@ -32,7 +41,7 @@ public class JadwalDokter extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
-        prepareKlinikData();
+        KlinikData();
     }
 
     @Override
@@ -47,55 +56,34 @@ public class JadwalDokter extends AppCompatActivity {
         }
     }
 
-    private void prepareKlinikData() {
-        Klinik klinik = new Klinik();
-        klinik.setKlinik("Klinik THT");
-        klinikList.add(klinik);
+    private void KlinikData() {
+        ApiService.newInstance().getJadwalService().jadwal()
+                .enqueue(new Callback<List<Klinik>>() {
+                    @Override
+                    public void onResponse(Call<List<Klinik>> call, final Response<List<Klinik>> response) {
+                        if (response.isSuccessful()){
+                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    klinikList.addAll(response.body());
+                                    mAdapter.notifyDataSetChanged();
+                                    //Toast.makeText(getApplicationContext(),response.body().getRuang(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
 
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Saraf");
-        klinikList.add(klinik);
+                    }
 
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Mata");
-        klinikList.add(klinik);
+                    @Override
+                    public void onFailure(Call<List<Klinik>> call, Throwable t) {
+                        new Handler(Looper.getMainLooper()).post(new Runnable() {
+                            @Override
+                            public void run() {
 
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Paru");
-        klinikList.add(klinik);
+                            }
+                        });
+                    }
+                });
 
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Bedah Anak");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Penyakit Dalam");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Bedah Ortopedi");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Kesehatan Anak");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Kulit dan Kelamin");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Jantung");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Psikologi");
-        klinikList.add(klinik);
-
-        klinik = new Klinik();
-        klinik.setKlinik("Klinik Bedah Urologi");
-        klinikList.add(klinik);
-
-        mAdapter.notifyDataSetChanged();
     }
 }

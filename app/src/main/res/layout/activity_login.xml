@@ -18,14 +18,14 @@
 
 
     <EditText
-        android:id="@+id/txtUsername"
+        android:id="@+id/txtNomorrm"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
         android:ems="10"
-        android:hint="Nomor RM"
+        android:hint="@string/NomorRM"
         android:inputType="text" />
 
     <!--<EditText
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         app:passwordToggleEnabled="true"
-        android:layout_below="@+id/txtUsername"
+        android:layout_below="@+id/txtNomorrm"
         app:passwordToggleDrawable="@drawable/icon_selector"
         app:passwordToggleTint="@color/colorAccent">
 
@@ -52,7 +52,7 @@
             android:id="@+id/password"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/txtUsername"
+            android:layout_alignStart="@+id/txtNomorrm"
             android:layout_marginLeft="37dp"
             android:hint="@string/Password"
             android:inputType="textPassword" />
@@ -62,7 +62,7 @@
         android:id="@+id/btnLogin"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtUsername"
+        android:layout_alignStart="@+id/txtNomorrm"
         android:layout_below="@+id/txtPassword"
         android:layout_marginTop="12dp"
         android:background="@color/colorPrimary"

@@ -6,174 +6,186 @@
     android:layout_height="match_parent"
     tools:context="skripsi.dita.antrianklinik.DetailJadwal">
 
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="170dp"
-        android:scaleType="centerCrop"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="1dp"
-        app:srcCompat="@drawable/img_klinik" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView5"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="18dp"
-        android:text="Klinik THT" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView19"
-        android:layout_below="@+id/textView19"
-        android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/ic_alarm" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/imageView6"
-        android:text="Jam 08.00 - 16.00 WIB" />
-
-    <View
-        android:id="@+id/view"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView30"
-        android:layout_marginTop="7dp"
-        android:background="@color/colorAccent" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_below="@+id/view"
-        android:layout_marginTop="7dp"
-        android:text="Senin" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
 
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView32"
-        android:layout_below="@+id/textView32"
-        android:text="dr. M. Arief Purnanta, Sp. THT-KL" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
+                app:srcCompat="@drawable/img_klinik" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView33"
-        android:layout_marginTop="7dp"
-        android:background="@color/colorAccent" />
+            <TextView
+                android:id="@+id/NamaKlinik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView5"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:text="Klinik THT" />
 
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView33"
-        android:layout_below="@+id/view2"
-        android:layout_marginTop="7dp"
-        android:text="Selasa" />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/NamaKlinik"
+                android:layout_below="@+id/NamaKlinik"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_alarm" />
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView34"
-        android:layout_below="@+id/textView34"
-        android:text="dr. A. Budiwan, Sp.THT" />
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView6"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/imageView6"
+                android:text="Jam 08.00 - 16.00 WIB" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView35"
-        android:layout_marginTop="7dp"
-        android:background="@color/colorAccent" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView30"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorAccent" />
 
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView33"
-        android:layout_below="@+id/view3"
-        android:layout_marginTop="7dp"
-        android:text="Rabu" />
+            <TextView
+                android:id="@+id/txtSenin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageView6"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="7dp"
+                android:text="Senin" />
 
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView34"
-        android:layout_below="@+id/textView36"
-        android:text="dr.Bambang Purwoatmodjo, Sp.THT-KL" />
+            <TextView
+                android:id="@+id/txtDokter1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSenin"
+                android:layout_below="@+id/txtSenin"
+                android:text="" />
 
-    <View
-        android:id="@+id/view4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView37"
-        android:layout_marginTop="7dp"
-        android:background="@color/colorAccent" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDokter1"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorAccent" />
 
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView33"
-        android:layout_below="@+id/view4"
-        android:layout_marginTop="7dp"
-        android:text="Kamis" />
+            <TextView
+                android:id="@+id/txtSelasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtDokter1"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="7dp"
+                android:text="Selasa" />
 
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView34"
-        android:layout_below="@+id/textView38"
-        android:text="dr.Budi Santoso, Sp.THT" />
+            <TextView
+                android:id="@+id/txtDokter2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/txtSelasa"
+                android:text="" />
 
-    <View
-        android:id="@+id/view5"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView39"
-        android:layout_marginTop="7dp"
-        android:background="@color/colorAccent" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDokter2"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorAccent" />
 
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView33"
-        android:layout_below="@+id/view5"
-        android:layout_marginTop="7dp"
-        android:text="Jumat" />
+            <TextView
+                android:id="@+id/txtRabu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/view3"
+                android:layout_marginTop="7dp"
+                android:text="Rabu" />
 
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView34"
-        android:layout_below="@+id/textView40"
-        android:text="dr.Budi Santoso, Sp.THT" />
+            <TextView
+                android:id="@+id/txtDokter3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/txtRabu"
+                android:text="" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDokter3"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtKamis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/view4"
+                android:layout_marginTop="7dp"
+                android:text="Kamis" />
+
+            <TextView
+                android:id="@+id/txtDokter4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/txtKamis"
+                android:text="" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDokter4"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txtJumat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/view5"
+                android:layout_marginTop="7dp"
+                android:text="Jumat" />
+
+            <TextView
+                android:id="@+id/txtDokter5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtSelasa"
+                android:layout_below="@+id/txtJumat"
+                android:text="" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
+    <!--<item
         android:id="@+id/nav_beranda"
         android:enabled="true"
         android:icon="@drawable/ic_home_white"
         android:title="Beranda"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"/>-->
 
     <item
         android:id="@+id/nav_jadwal"
         android:enabled="true"
-        android:icon="@drawable/ic_schedule_wh"
+        android:icon="@drawable/ic_jadwal"
         android:title="Jadwal"
         app:showAsAction="ifRoom"/>
 
@@ -26,15 +26,16 @@
     <item
         android:id="@+id/nav_antrian"
         android:enabled="true"
-        android:icon="@drawable/ic_people_white"
+        android:icon="@drawable/ic_queue"
         android:title="Antrian"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/nav_profil"
+        android:id="@+id/nav_account"
         android:enabled="true"
-        android:icon="@drawable/ic_people_white"
-        android:title="Antrian"
+        android:icon="@drawable/ic_user"
+        android:title="Profil"
         app:showAsAction="ifRoom"/>
+
 
 </menu>

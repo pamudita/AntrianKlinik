@@ -148,7 +148,7 @@
                 android:text="No. Kartu" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/txtNoKartu"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView16"
@@ -163,11 +163,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView16"
                 android:layout_marginTop="12dp"
-                android:layout_below="@+id/editText"
+                android:layout_below="@+id/txtNoKartu"
                 android:text="Tanggal Periksa" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/txtTglPeriksa"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView16"
@@ -175,12 +175,14 @@
                 android:layout_marginTop="5dp"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView23"
-                android:layout_toEndOf="@+id/editText5"
+                android:layout_toEndOf="@+id/txtTglPeriksa"
+                android:onClick="Calendar"
                 app:srcCompat="@drawable/ic_calendar" />
 
             <TextView
@@ -189,7 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:layout_alignStart="@+id/textView16"
-                android:layout_below="@+id/editText5"
+                android:layout_below="@+id/txtTglPeriksa"
                 android:text="Poliklinik" />
 
             <Spinner

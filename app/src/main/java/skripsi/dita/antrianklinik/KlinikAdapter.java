@@ -43,13 +43,16 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position){
-        Klinik poliklinik = klinikList.get(position);
-        holder.namaKlinik.setText(poliklinik.getKlinik());
+    public void onBindViewHolder(MyViewHolder holder, final int position){
+        Klinik klinik = klinikList.get(position);
+        holder.namaKlinik.setText(klinik.getRuang());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(context, DetailJadwal.class);
+                i.putExtra("kode_ruang", klinikList.get(position).getKode_ruang());
+                i.putExtra("nama_ruang", klinikList.get(position).getRuang());
                 context.startActivity(i);
 
             }

@@ -12,7 +12,6 @@ public class Antrian {
     public String getAntrian() {
         return antrian;
     }
-
     public void setAntrian(String antrian) {
         this.antrian = antrian;
     }
@@ -20,7 +19,6 @@ public class Antrian {
     public String getNamaklinik() {
         return namaklinik;
     }
-
     public void setNamaklinik(String namaklinik) {
         this.namaklinik = namaklinik;
     }
@@ -28,7 +26,6 @@ public class Antrian {
     public String getStatusantrian() {
         return statusantrian;
     }
-
     public void setStatusantrian(String statusantrian) {
         this.statusantrian = statusantrian;
     }

@@ -20,14 +20,20 @@ public class SplashScreen extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
 
+        final PrefManager prefManager = new PrefManager(SplashScreen.this);
+
         new Handler().postDelayed(new Runnable() {
 
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(SplashScreen.this, Login.class);
-                startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
-
+                if (prefManager.getSPSudahLogin()){
+                    Intent intent = new Intent(SplashScreen.this, BottomNavMenu.class);
+                      startActivity(intent);
+                }else{
+                    Intent i = new Intent(SplashScreen.this, Login.class);
+                    startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
+                }
 
                 //jeda selesai Splashscreen
                 this.finish();
