@@ -17,70 +17,16 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="48dp"
             android:text="Selamat Datang"
-            android:textSize="16dp" />
+            android:textSize="20dp" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="80dp"
-            android:layout_height="100dp"
+            android:layout_width="200dp"
+            android:layout_height="270dp"
             android:layout_below="@+id/textView3"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/rsst" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="Nomor RM"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
-            android:layout_centerHorizontal="true"
-            android:text="879885" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="17dp"
-            android:textSize="16dp"
-            android:text="Nama Pasien" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView6"
-            android:layout_centerHorizontal="true"
-            android:text="Pamudita Saputri" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView7"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
-            android:textSize="16dp"
-            android:text="Tanggal Lahir" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView4"
-            android:layout_below="@+id/textView8"
-            android:text="28-10-1992" />
     </RelativeLayout>
 
 

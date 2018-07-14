@@ -6,7 +6,6 @@
     android:layout_margin="10dp"
     android:layout_height="wrap_content">
 
-
     <TextView
         android:id="@+id/txtNoAntrian"
         android:layout_width="wrap_content"
@@ -18,6 +17,15 @@
         android:textSize="45dp" />
 
     <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtNoAntrian"
+        android:layout_below="@+id/txtNoAntrian"
+        android:layout_marginEnd="28dp"
+        android:text="Tunggu" />
+
+    <TextView
         android:id="@+id/txtNamaKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +35,7 @@
         android:textSize="16dp" />
 
     <TextView
-        android:id="@+id/textView50"
+        android:id="@+id/txtNamaDokter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtNamaKlinik"
@@ -35,27 +43,28 @@
         android:text="dr. Arif Purnanta" />
 
     <TextView
-        android:id="@+id/textView52"
+        android:id="@+id/txtTglperiksa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtNoAntrian"
-        android:layout_alignEnd="@+id/textView50"
+        android:layout_alignStart="@+id/txtNamaKlinik"
+        android:layout_below="@+id/txtNamaDokter"
+        android:text="Tgl.Periksa : 17-07-2018"/>
+
+    <TextView
+        android:id="@+id/txtSisaAntrian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTglperiksa"
+        android:layout_alignStart="@+id/txtNamaKlinik"
         android:text="Sisa Antrian : 10" />
 
     <TextView
-        android:id="@+id/textView54"
+        android:id="@+id/txtEstimasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView52"
-        android:layout_below="@+id/txtNoAntrian"
+        android:layout_alignStart="@+id/txtSisaAntrian"
+        android:layout_below="@+id/txtSisaAntrian"
         android:text="Estimasi waktu dipanggil : 09.00" />
 
-    <TextView
-        android:id="@+id/txtStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtNoAntrian"
-        android:layout_below="@+id/txtNoAntrian"
-        android:layout_marginEnd="28dp"
-        android:text="Tunggu" />
+
 </RelativeLayout>

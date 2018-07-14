@@ -54,6 +54,14 @@ public class Klinik {
     public void setHari(String hari) {
         this.hari = hari;
     }
+
+    public Klinik(){
+
+    }
+    public Klinik(String ruang) {
+        this.ruang = ruang;
+    }
+
     /*public String getKlinik() {
         return klinik;
     }

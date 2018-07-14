@@ -23,8 +23,9 @@ public class AntrianAdapter extends RecyclerView.Adapter<AntrianAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView noAntrian;
-        public TextView namaKlinik;
         public TextView statusAntrian;
+        public TextView namaKlinik, namaDokter, sisaAntrian, estimasiWaktu;
+
 
         public MyViewHolder(View view){
             super(view);
@@ -49,9 +50,9 @@ public class AntrianAdapter extends RecyclerView.Adapter<AntrianAdapter.MyViewHo
     @Override
     public void onBindViewHolder(AntrianAdapter.MyViewHolder holder, int position){
         Antrian antrian = antrianList.get(position);
-        holder.noAntrian.setText(antrian.getAntrian());
-        holder.namaKlinik.setText(antrian.getNamaklinik());
-        holder.statusAntrian.setText(antrian.getStatusantrian());
+        holder.noAntrian.setText(antrian.getNo_antrian());
+        holder.namaKlinik.setText(antrian.getRuang());
+        holder.statusAntrian.setText(antrian.getStatus());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

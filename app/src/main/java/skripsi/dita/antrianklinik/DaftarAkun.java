@@ -44,7 +44,7 @@ public class DaftarAkun extends AppCompatActivity implements DatePickerDialog.On
             @Override
             public void onClick(View view) {
                 String NoRm = NomorRm.getText().toString();
-                String Tgllahir = TglLahir.getText().toString();
+                String Tgl_lahir = TglLahir.getText().toString();
                 String password = Password.getText().toString();
 
                 Daftar(NoRm,password,Tgl_lahir);
@@ -80,8 +80,8 @@ public class DaftarAkun extends AppCompatActivity implements DatePickerDialog.On
                             @Override
                             public void run() {
                                 Toast.makeText(getApplicationContext(),"gagal daftar", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                            }
+                        });
                     }
                 });
     }
@@ -99,7 +99,8 @@ public class DaftarAkun extends AppCompatActivity implements DatePickerDialog.On
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        TglLahir.setText(dayOfMonth+"-"+(monthOfYear + 1)+"-"+year);
-        Tgl_lahir = year+"-"+(monthOfYear + 1)+"-"+dayOfMonth;
+        TglLahir.setText(year+"-"+(monthOfYear + 1)+"-"+dayOfMonth);
+        //TglLahir.setText(dayOfMonth+"-"+(monthOfYear + 1)+"-"+year);
+        //Tgl_lahir = year+"-"+(monthOfYear + 1)+"-"+dayOfMonth;
     }
 }

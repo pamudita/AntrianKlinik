@@ -8,20 +8,19 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-
-import skripsi.dita.antrianklinik.model.Klinik;
+import skripsi.dita.antrianklinik.model.Dokter;
 
 /**
- * Created by Dita on 24/06/2018.
+ * Created by Dita on 26/06/2018.
  */
 
-public class KlinikListAdapter extends ArrayAdapter<Klinik> {
+public class DokterListAdapter extends ArrayAdapter<Dokter>{
     // Your sent context
     private Context context;
     // Your custom values for the spinner (User)
-    private List<Klinik> values;
+    private List<Dokter> values;
 
-    public KlinikListAdapter(Context context, int textViewResourceId, List<Klinik> values) {
+    public DokterListAdapter(Context context, int textViewResourceId, List<Dokter> values) {
         super(context, textViewResourceId, values);
         this.context = context;
         this.values = values;
@@ -33,7 +32,7 @@ public class KlinikListAdapter extends ArrayAdapter<Klinik> {
     }
 
     @Override
-    public Klinik getItem(int position) {
+    public Dokter getItem(int position) {
         return values.get(position);
     }
 
@@ -52,7 +51,7 @@ public class KlinikListAdapter extends ArrayAdapter<Klinik> {
         label.setTextColor(Color.BLACK);
         // Then you can get the current item using the values array (Users array) and the current position
         // You can NOW reference each method you has created in your bean object (User class)
-        label.setText(values.get(position).getRuang());
+        label.setText(values.get(position).getNama());
 
         // And finally return your dynamic (or custom) view for each spinner item
         return label;
@@ -65,7 +64,7 @@ public class KlinikListAdapter extends ArrayAdapter<Klinik> {
                                 ViewGroup parent) {
         TextView label = (TextView) super.getDropDownView(position, convertView, parent);
         label.setTextColor(Color.BLACK);
-        label.setText(values.get(position).getRuang());
+        label.setText(values.get(position).getNama());
 
         return label;
     }

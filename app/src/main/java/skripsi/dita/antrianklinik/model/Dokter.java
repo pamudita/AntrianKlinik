@@ -34,4 +34,10 @@ public class Dokter {
     public String getNama() { return nama; }
     public void setNama(String nama) { this.nama = nama; }
 
+    public Dokter(){
+
+    }
+    public Dokter(String nama) {
+        this.nama = nama;
+    }
 }
