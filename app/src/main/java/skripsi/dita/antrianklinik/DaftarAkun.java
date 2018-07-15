@@ -62,7 +62,7 @@ public class DaftarAkun extends AppCompatActivity implements DatePickerDialog.On
                             new Handler(Looper.getMainLooper()).post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    if (response.body().getAlert() == null){
+                                    if (response.body().getAlert() != null){
                                         Toast.makeText(getApplicationContext(),response.body().getAlert(), Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(DaftarAkun.this, Login.class);
                                         startActivity(intent);

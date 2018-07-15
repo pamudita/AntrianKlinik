@@ -23,7 +23,6 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.MyViewHold
 
     private List<Klinik> klinikList;
     private List<Klinik> filteredList;
-    private CustomFilter filter;
     private Context context;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -37,15 +36,7 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.MyViewHold
 
     public KlinikAdapter(List<Klinik> poliklinikList) {
         this.klinikList = poliklinikList;
-        filteredList = new ArrayList<>();
-        filteredList.addAll(klinikList);
-        filter = new CustomFilter(this);
-    }
-
-    public KlinikAdapter(List<Klinik> poliklinikList, Context context) {
-        this.klinikList = poliklinikList;
-        this.context = context;
-
+        this.filteredList = poliklinikList;
     }
 
     @Override
@@ -58,15 +49,15 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        Klinik klinik = klinikList.get(position);
+        final Klinik klinik = filteredList.get(position);
         holder.namaKlinik.setText(klinik.getRuang());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent i = new Intent(context, DetailJadwal.class);
-                i.putExtra("kode_ruang", klinikList.get(position).getKode_ruang());
-                i.putExtra("nama_ruang", klinikList.get(position).getRuang());
+                i.putExtra("kode_ruang", klinik.getKode_ruang());
+                i.putExtra("nama_ruang", klinik.getRuang());
                 context.startActivity(i);
 
             }
@@ -74,51 +65,52 @@ public class KlinikAdapter extends RecyclerView.Adapter<KlinikAdapter.MyViewHold
     }
 
     @Override
-    public Filter getFilter() {
-        return filter;
+    public int getItemCount() {
+        return filteredList != null ? filteredList.size() : 0;
     }
 
     @Override
-    public int getItemCount() {
-        return klinikList.size();
-    }
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String charString = charSequence.toString();
+                if (charString.isEmpty()) {
+                    filteredList = klinikList;
+                } else {
+                    List<Klinik> filteredKlinikList = new ArrayList<>();
+                    for (Klinik row : klinikList) {
 
-    public class CustomFilter extends Filter {
-        private KlinikAdapter mAdapter;
+                        // name match condition. this might differ depending on your requirement
+                        // here we are looking for name or phone number match
+//                        if (row.getRuang().toLowerCase().startsWith(charString.toLowerCase())) {
+//                            filteredList.add(row);
+//                        }
 
-        private CustomFilter(KlinikAdapter mAdapter) {
-            super();
-            this.mAdapter = mAdapter;
-        }
-
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            System.out.println("filtered");
-            filteredList.clear();
-            final FilterResults results = new FilterResults();
-            if (constraint.length() == 0) {
-                filteredList.addAll(klinikList);
-                mAdapter.notifyDataSetChanged();
-            } else {
-                final String filterPattern = constraint.toString().toLowerCase().trim();
-                for (final Klinik klinik : klinikList) {
-                    if (klinik.getRuang().toLowerCase().startsWith(filterPattern)) {
-                        filteredList.add(klinik);
+                        for (String s : row.getRuang().toLowerCase().split(" ")) {
+                            if (s.startsWith(charString.toLowerCase())) {
+                                filteredKlinikList.add(row);
+                                break;
+                            } else if (row.getRuang().toLowerCase().startsWith(charString.toLowerCase())) {
+                                filteredKlinikList.add(row);
+                                break;
+                            }
+                        }
                     }
 
-                    System.out.println("fill");
+                    filteredList = filteredKlinikList;
                 }
-                mAdapter.notifyDataSetChanged();
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = filteredList;
+                return filterResults;
             }
 
-            results.values = filteredList;
-            results.count = filteredList.size();
-            return results;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            this.mAdapter.notifyDataSetChanged();
-        }
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                filteredList = (ArrayList<Klinik>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 }

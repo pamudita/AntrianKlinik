@@ -73,6 +73,14 @@ public class Pendaftaran {
     @Expose
     private String no_antrian;
 
+    @SerializedName("no_telp")
+    @Expose
+    private String noHp;
+
+    @SerializedName("alamat")
+    @Expose
+    private String alamat;
+
     @SerializedName("alert")
     @Expose
     private String alert;
@@ -150,5 +158,21 @@ public class Pendaftaran {
     }
     public void setAlert(String alert) {
         this.alert = alert;
+    }
+
+    public String getNoHp() {
+        return noHp;
+    }
+
+    public void setNoHp(String noHp) {
+        this.noHp = noHp;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
     }
 }

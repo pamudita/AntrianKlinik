@@ -17,5 +17,6 @@ public class ApiUrl {
     public static String RESUME_DAFTAR_API = BASE_API.concat("/?resdaf");
     public static String DAFTAR_ANTRIAN_API = BASE_API.concat("/?daftarantrian");
     public static String LOGOUT_API = BASE_API.concat("/logout");
+    public static String UPDATE_PASSWORD = BASE_API.concat("/?updatepassword");
 
 }

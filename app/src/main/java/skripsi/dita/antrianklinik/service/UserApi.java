@@ -24,4 +24,11 @@ public interface UserApi {
                       @Query("norm") String norm,
                       @Query("password") String password,
                       @Query("tgl_lahir") String tgl_lahir);
+
+    @GET
+    Call<User> updatePassword(@Url String url,
+                              @Query("norm") String norm,
+                              @Query("newpass") String password,
+                              @Query("passlama") String passwordLama);
+
 }

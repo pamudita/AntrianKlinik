@@ -25,6 +25,10 @@ public class User {
     @Expose
     private String alert;
 
+    @SerializedName("status")
+    @Expose
+    private int status;
+
 
     public String getNorm() {
         return norm;
@@ -52,5 +56,13 @@ public class User {
     }
     public void setAlert(String alert) {
         this.alert = alert;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

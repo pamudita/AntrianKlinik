@@ -32,4 +32,8 @@ public class UserService extends BaseService<UserApi> {
     public Call<User> daftar(String norm, String tgl_lahir, String password) {
         return getApi().daftar(ApiUrl.DAFTAR_AKUN_API, norm, password, tgl_lahir);
     }
+
+    public Call<User> updatePassword(String norm, String newPass, String passLama){
+        return getApi().updatePassword(ApiUrl.UPDATE_PASSWORD, norm, newPass, passLama);
+    }
 }

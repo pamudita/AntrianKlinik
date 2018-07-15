@@ -69,6 +69,7 @@ public class Login extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(),"Login Sukses", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(Login.this, BottomNavMenu.class);
                                         startActivity(intent);
+                                        finish();
                                     }else {
                                         Toast.makeText(getApplicationContext(),response.body().getAlert(), Toast.LENGTH_SHORT).show();
                                     }
