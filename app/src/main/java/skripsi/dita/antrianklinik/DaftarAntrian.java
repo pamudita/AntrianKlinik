@@ -1,5 +1,7 @@
 package skripsi.dita.antrianklinik;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -10,7 +12,11 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import skripsi.dita.antrianklinik.model.Antrian;
+import skripsi.dita.antrianklinik.service.ApiService;
 
 public class DaftarAntrian extends AppCompatActivity {
     private List<Antrian> antrianList = new ArrayList<>();
@@ -32,7 +38,7 @@ public class DaftarAntrian extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(mAdapter);
 
-        prepareAntrianData();
+        DaftarAntrian();
     }
 
     @Override
@@ -47,19 +53,33 @@ public class DaftarAntrian extends AppCompatActivity {
         }
     }
 
-    private void prepareAntrianData() {
-        Antrian antrian = new Antrian();
-        antrian.setAntrian("T001");
-        antrian.setNamaklinik("Klinik THT");
-        antrian.setStatusantrian("Tunggu");
-        antrianList.add(antrian);
+    private void DaftarAntrian(){
+        PrefManager prefManager = new PrefManager(DaftarAntrian.this);
+        ApiService.newInstance().getAntrianService()
+                .daftarantrian(prefManager.getSpNorm()).enqueue(new Callback<List<Antrian>>() {
+                    @Override
+                    public void onResponse(Call<List<Antrian>> call, final Response<List<Antrian>> response) {
+                        if (response.isSuccessful()){
+                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    antrianList.addAll(response.body());
+                                    mAdapter.notifyDataSetChanged();
+                                }
+                            });
+                        }
+                    }
 
-        antrian = new Antrian();
-        antrian.setAntrian("A002");
-        antrian.setNamaklinik("Klinik Anak");
-        antrian.setStatusantrian("Batal");
-        antrianList.add(antrian);
+                    @Override
+                    public void onFailure(Call<List<Antrian>> call, Throwable t) {
+                        new Handler(Looper.getMainLooper()).post(new Runnable() {
+                            @Override
+                            public void run() {
 
-        mAdapter.notifyDataSetChanged();
+                            }
+                        });
+                    }
+                });
     }
+
 }

@@ -29,4 +29,6 @@ public class ApiService {
     public PendaftaranService getPendaftaranService(){
         return PendaftaranService.getInstance();
     }
+
+    public AntrianService getAntrianService(){ return AntrianService.getInstance();}
 }

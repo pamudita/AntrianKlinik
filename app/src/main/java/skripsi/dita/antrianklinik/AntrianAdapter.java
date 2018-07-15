@@ -29,9 +29,12 @@ public class AntrianAdapter extends RecyclerView.Adapter<AntrianAdapter.MyViewHo
 
         public MyViewHolder(View view){
             super(view);
-            noAntrian = (TextView) view.findViewById(R.id.txtNoAntrian);
-            namaKlinik = (TextView) view.findViewById(R.id.txtNamaKlinik);
+            noAntrian   = (TextView) view.findViewById(R.id.txtNoAntrian);
+            namaKlinik  = (TextView) view.findViewById(R.id.txtNamaKlinik);
             statusAntrian = (TextView) view.findViewById(R.id.txtStatus);
+            namaDokter  = (TextView) view.findViewById(R.id.txtNamaDokter);
+            sisaAntrian = (TextView)view.findViewById(R.id.txtSisaAntrian);
+            estimasiWaktu = (TextView) view.findViewById(R.id.txtEstimasi);
         }
     }
 
@@ -53,6 +56,10 @@ public class AntrianAdapter extends RecyclerView.Adapter<AntrianAdapter.MyViewHo
         holder.noAntrian.setText(antrian.getNo_antrian());
         holder.namaKlinik.setText(antrian.getRuang());
         holder.statusAntrian.setText(antrian.getStatus());
+        holder.namaDokter.setText(antrian.getNama());
+        //holder.sisaAntrian.setText(antrian.());
+        holder.estimasiWaktu.setText(antrian.getJamPeriksa());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

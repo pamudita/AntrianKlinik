@@ -21,6 +21,10 @@ public class AntrianService extends BaseService<AntrianApi>{
         return instance;
     }
 
+    public AntrianService() {
+        setApi(AntrianApi.class);
+    }
+
     public Call<List<Antrian>> daftarantrian(String norm){
         return getApi().daftarantrian(ApiUrl.DAFTAR_ANTRIAN_API, norm);
     }
