@@ -39,32 +39,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtNamaKlinik"
-        android:layout_below="@+id/txtNamaKlinik"
-        android:text="dr. Arif Purnanta" />
+        android:layout_below="@+id/txtNamaKlinik"/>
 
     <TextView
         android:id="@+id/txtTglperiksa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtNamaKlinik"
-        android:layout_below="@+id/txtNamaDokter"
-        android:text="Tgl.Periksa : 17-07-2018"/>
+        android:layout_below="@+id/txtNamaDokter"/>
 
     <TextView
-        android:id="@+id/txtSisaAntrian"
+        android:id="@+id/txtAntrianSkrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtTglperiksa"
-        android:layout_alignStart="@+id/txtNamaKlinik"
-        android:text="Sisa Antrian : 10" />
+        android:layout_alignStart="@+id/txtNamaKlinik"/>
 
     <TextView
         android:id="@+id/txtEstimasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtSisaAntrian"
-        android:layout_below="@+id/txtSisaAntrian"
-        android:text="Estimasi waktu dipanggil : 09.00" />
+        android:layout_alignStart="@+id/txtAntrianSkrg"
+        android:layout_below="@+id/txtAntrianSkrg"
+        android:text="" />
 
 
 </RelativeLayout>
