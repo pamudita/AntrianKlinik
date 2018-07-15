@@ -23,7 +23,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="18dp"
         android:layout_marginTop="20dp"
-        android:text="A101"
         android:textSize="40dp" />
 
     <TextView
@@ -32,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/txtNoAntrian"
         android:layout_centerHorizontal="true"
-        android:text="Klinik THT"
         android:textSize="16dp" />
 
     <TextView
@@ -103,12 +101,11 @@
         android:text="Nama Pasien" />
 
     <TextView
-        android:id="@+id/textView46"
+        android:id="@+id/txtNamaPasien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/view3"
-        android:layout_alignStart="@+id/txtNoRM"
-        android:text=": Pamudita Saputri" />
+        android:layout_alignStart="@+id/txtNoRM"/>
 
     <View
         android:id="@+id/view3"
@@ -135,7 +132,7 @@
         android:id="@+id/txtJK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView46"
+        android:layout_alignStart="@+id/txtNamaPasien"
         android:layout_alignTop="@+id/textView47"
         android:text=": Perempuan" />
 
@@ -165,8 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtJK"
-        android:layout_alignTop="@+id/textView49"
-        android:text=": 17-05-2018 (08.00  s.d 16.00)" />
+        android:layout_alignTop="@+id/textView49"/>
 
     <View
         android:id="@+id/view5"
@@ -190,13 +186,12 @@
         android:text="Poliklinik" />
 
     <TextView
-        android:id="@+id/textView53"
+        android:id="@+id/txtKlinik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView51"
         android:layout_alignBottom="@+id/textView51"
-        android:layout_alignStart="@+id/txtTglPeriksa"
-        android:text=": Klinik THT" />
+        android:layout_alignStart="@+id/txtTglPeriksa" />
 
     <View
         android:id="@+id/view7"
@@ -220,12 +215,11 @@
         android:text="Dokter" />
 
     <TextView
-        android:id="@+id/textView58"
+        android:id="@+id/txtDokter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView53"
-        android:layout_alignTop="@+id/textView57"
-        android:text=": dr. M. Arief Purnanta, Sp.THT-KL" />
+        android:layout_alignStart="@+id/txtKlinik"
+        android:layout_alignTop="@+id/textView57"/>
 
     <View
         android:id="@+id/view8"
