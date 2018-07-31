@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "61277753820",
+    "firebase_url": "https://notificationgcm-1253.firebaseio.com",
+    "project_id": "notificationgcm-1253"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61277753820:android:0b5a4054e8101142",
+        "android_client_info": {
+          "package_name": "com.skripsi.meetingchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61277753820-ot4kefftuajb99afl22rvh3mpllibueo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM9NLmaPxi9S7eKEm-_QskY-FKeMrhxGg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61277753820:android:ea197073a112d248",
+        "android_client_info": {
+          "package_name": "skripsi.dita.antrianklinik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61277753820-m041hvqo8q3i20k3ufunacgk2fc83jk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "skripsi.dita.antrianklinik",
+            "certificate_hash": "6d5d2853e8c362623df9c732466052254643145e"
+          }
+        },
+        {
+          "client_id": "61277753820-ot4kefftuajb99afl22rvh3mpllibueo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM9NLmaPxi9S7eKEm-_QskY-FKeMrhxGg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61277753820-ot4kefftuajb99afl22rvh3mpllibueo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
