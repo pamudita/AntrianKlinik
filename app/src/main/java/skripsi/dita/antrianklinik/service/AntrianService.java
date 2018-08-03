@@ -28,4 +28,12 @@ public class AntrianService extends BaseService<AntrianApi>{
     public Call<List<Antrian>> daftarantrian(String norm){
         return getApi().daftarantrian(ApiUrl.DAFTAR_ANTRIAN_API, norm);
     }
+
+    public Call<Antrian> batal(String norm, String noantrian){
+        return  getApi().batal(ApiUrl.BATAL_ANTRIAN_API, norm,noantrian);
+    }
+
+    public Call<Antrian> updatefcm(String norm, String tokenfcm){
+        return  getApi().updatefcm(ApiUrl.UPDATE_FCM_API, norm,tokenfcm);
+    }
 }

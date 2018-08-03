@@ -15,8 +15,6 @@
         android:layout_marginTop="33dp"
         app:srcCompat="@drawable/rsst" />
 
-
-
     <EditText
         android:id="@+id/txtNomorrm"
         android:layout_width="290dp"

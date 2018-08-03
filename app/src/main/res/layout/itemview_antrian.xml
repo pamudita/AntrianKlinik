@@ -13,17 +13,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="11dp"
-        android:text="A101"
         android:textSize="45dp" />
 
     <TextView
         android:id="@+id/txtStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtNoAntrian"
+        android:layout_marginStart="11dp"
         android:layout_below="@+id/txtNoAntrian"
-        android:layout_marginEnd="28dp"
-        android:text="Tunggu" />
+        android:gravity="center"
+        android:layout_marginEnd="38dp"/>
 
     <TextView
         android:id="@+id/txtNamaKlinik"
@@ -31,7 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/txtNoAntrian"
         android:layout_centerHorizontal="true"
-        android:text="Klinik THT"
         android:textSize="16dp" />
 
     <TextView
@@ -63,5 +61,17 @@
         android:layout_below="@+id/txtAntrianSkrg"
         android:text="" />
 
+    <Button
+        android:id="@+id/btnBatal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtStatus"
+        android:layout_below="@+id/txtStatus"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="2dp"
+        android:text="Batal"
+        android:onClick="batalAntrian"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>

@@ -17,4 +17,14 @@ public interface AntrianApi {
     @GET
     Call<List<Antrian>> daftarantrian(@Url String url,
                                       @Query("norm") String norm);
+
+    @GET
+    Call<Antrian> batal(@Url String url,
+                        @Query("norm") String norm,
+                        @Query("noantrian") String noantrian);
+
+    @GET
+    Call<Antrian> updatefcm(@Url String url,
+                            @Query("norm") String norm,
+                            @Query("tokenfcm") String tokenfcm);
 }

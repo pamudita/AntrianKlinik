@@ -1,8 +1,6 @@
 package skripsi.dita.antrianklinik.common;
 
-/**
- * Created by Kristiawan on 21/04/18.
- */
+
 public class ApiUrl {
 
     public static String BASE_API = "https://antrian-klinik.herokuapp.com";
@@ -16,6 +14,8 @@ public class ApiUrl {
     public static String PENDAFTARAN_API = BASE_API.concat("/?daftarp");
     public static String RESUME_DAFTAR_API = BASE_API.concat("/?resdaf");
     public static String DAFTAR_ANTRIAN_API = BASE_API.concat("/?daftarantrian");
+    public static String BATAL_ANTRIAN_API = BASE_API.concat("/?batal");
+    public static String UPDATE_FCM_API = BASE_API.concat("/?updatefcm");
     public static String LOGOUT_API = BASE_API.concat("/logout");
     public static String UPDATE_PASSWORD = BASE_API.concat("/?updatepassword");
 

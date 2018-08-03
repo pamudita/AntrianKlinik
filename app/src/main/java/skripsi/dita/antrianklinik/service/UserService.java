@@ -5,10 +5,6 @@ import skripsi.dita.antrianklinik.common.ApiUrl;
 import skripsi.dita.antrianklinik.model.User;
 import retrofit2.Call;
 
-/**
- * Created by Kristiawan on 21/04/18.
- * this class for example
- */
 public class UserService extends BaseService<UserApi> {
 
     private static UserService instance;

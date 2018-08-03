@@ -59,6 +59,11 @@ public class ProfilAkun extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void Tentang(View view){
+        Intent i = new Intent(ProfilAkun.this, Tentang.class);
+        startActivity(i);
+    }
+
     public void Logout(View view) {
         prefManager.spEditor.clear();
         prefManager.spEditor.commit();

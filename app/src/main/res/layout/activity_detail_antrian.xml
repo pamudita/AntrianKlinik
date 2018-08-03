@@ -11,18 +11,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txtNamaKlinik"
-        android:layout_alignEnd="@+id/textView47"
-        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/txtNoAntrian"
         android:text="No. Antrian" />
 
     <TextView
         android:id="@+id/txtNoAntrian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/view6"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:textSize="40dp" />
 
     <TextView
@@ -34,27 +33,26 @@
         android:textSize="16dp" />
 
     <TextView
-        android:id="@+id/textView52"
+        android:id="@+id/txtAntrianSkrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtNamaKlinik"
+        android:layout_alignStart="@+id/txtNoRM"
         android:layout_below="@+id/txtNamaKlinik"
-        android:text="Sisa Antrian : 10" />
+        android:layout_marginStart="22dp"/>
 
     <TextView
-        android:id="@+id/textView54"
+        android:id="@+id/txtEstimasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtNoAntrian"
-        android:layout_alignStart="@+id/textView52"
-        android:text="Estimasi waktu dipanggil : 09.00" />
+        android:layout_alignStart="@+id/txtAntrianSkrg"
+        android:layout_below="@+id/txtAntrianSkrg"/>
 
     <View
         android:id="@+id/view6"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView54"
+        android:layout_below="@+id/txtEstimasi"
         android:layout_marginTop="12dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
@@ -64,9 +62,9 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_alignStart="@+id/textView47"
+        android:layout_alignStart="@+id/view6"
         android:layout_below="@+id/view6"
+        android:layout_marginTop="12dp"
         android:text="Nomor RM" />
 
     <TextView
@@ -75,9 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView1"
         android:layout_alignBottom="@+id/textView1"
-        android:layout_marginStart="17dp"
-        android:layout_toEndOf="@+id/txtNoAntrian"
-        android:text=": 879885" />
+        android:layout_marginStart="59dp"
+        android:layout_toEndOf="@+id/textView44"/>
 
     <View
         android:id="@+id/view2"
@@ -122,7 +119,7 @@
         android:id="@+id/textView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView45"
+        android:layout_alignStart="@+id/textView2"
         android:layout_below="@+id/view3"
         android:layout_marginTop="11dp"
         android:layout_marginLeft="2dp"
@@ -133,8 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtNamaPasien"
-        android:layout_alignTop="@+id/textView47"
-        android:text=": Perempuan" />
+        android:layout_alignTop="@+id/textView47" />
 
     <View
         android:id="@+id/view4"
@@ -155,7 +151,7 @@
         android:layout_below="@+id/view4"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="2dp"
-        android:text="Tgl/Jam Periksa" />
+        android:text="Tgl Periksa" />
 
     <TextView
         android:id="@+id/txtTglPeriksa"
@@ -183,7 +179,7 @@
         android:layout_below="@+id/view5"
         android:layout_marginTop="11dp"
         android:layout_marginLeft="2dp"
-        android:text="Poliklinik" />
+        android:text="Klinik" />
 
     <TextView
         android:id="@+id/txtKlinik"
@@ -242,8 +238,5 @@
         android:background="@color/colorPrimary"
         android:textColor="#ffffff"
         android:text="Batal" />
-
-
-
 
 </RelativeLayout>

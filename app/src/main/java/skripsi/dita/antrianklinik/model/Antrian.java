@@ -16,22 +16,33 @@ public class Antrian {
     @Expose
     private String status;
 
-    @SerializedName("Ruang")
+    @SerializedName("klinik")
     @Expose
-    private String Ruang;
+    private String klinik;
 
-    @SerializedName("Nama")
+    @SerializedName("dokter")
     @Expose
-    private String Nama;
+    private String dokter;
 
-    @SerializedName("TglPeriksa")
+    @SerializedName("tgl_periksa")
     @Expose
-    private String TglPeriksa;
+    private String tgl_periksa;
+
+    @SerializedName("antrian_saat_ini")
+    @Expose
+    private String antrian_saat_ini;
 
     @SerializedName("JamPeriksa")
     @Expose
     private String JamPeriksa;
 
+    @SerializedName("estimasi")
+    @Expose
+    private String estimasi;
+
+    @SerializedName("alert")
+    @Expose
+    private String alert;
 
     public String getNo_antrian() {
         return no_antrian;
@@ -47,25 +58,25 @@ public class Antrian {
         this.status = status;
     }
 
-    public String getRuang() {
-        return Ruang;
+    public String getKlinik() {
+        return klinik;
     }
-    public void setRuang(String Ruang) {
-        this.Ruang = Ruang;
-    }
-
-    public String getNama() {
-        return Nama;
-    }
-    public void setNama(String Nama) {
-        this.Nama = Nama;
+    public void setKlinik(String klinik) {
+        this.klinik = klinik;
     }
 
-    public String getTglPeriksa() {
-        return TglPeriksa;
+    public String getDokter() {
+        return dokter;
     }
-    public void setTglPeriksa(String TglPeriksa) {
-        this.TglPeriksa = TglPeriksa;
+    public void setDokter(String dokter) {
+        this.dokter = dokter;
+    }
+
+    public String getTgl_periksa() {
+        return tgl_periksa;
+    }
+    public void setTgl_periksa(String tgl_periksa) {
+        this.tgl_periksa = tgl_periksa;
     }
 
     public String getJamPeriksa() {
@@ -74,5 +85,22 @@ public class Antrian {
     public void setJamPeriksa(String JamPeriksa) {
         this.JamPeriksa = JamPeriksa;
     }
+
+    public String getAntrian_saat_ini() {
+        return antrian_saat_ini;
+    }
+    public void setAntrian_saat_ini(String antrian_saat_ini) {
+        this.antrian_saat_ini = antrian_saat_ini;
+    }
+
+    public String getEstimasi() {
+        return estimasi;
+    }
+    public void setEstimasi(String estimasi) {
+        this.estimasi = estimasi;
+    }
+
+    public String getAlert() {return alert;}
+    public void setAlert(String alert) {this.alert = alert;}
 
 }

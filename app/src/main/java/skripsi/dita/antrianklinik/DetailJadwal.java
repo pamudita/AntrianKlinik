@@ -61,23 +61,23 @@ public class DetailJadwal extends AppCompatActivity {
                                     switch (klinik.getHari()){
                                         case "1" :
                                             dokter = dokter +", "+ klinik.getNama_dokter();
-                                            namaDokter1.setText(namaDokter1.getText()+ " \n"+klinik.getNama_dokter());
+                                            namaDokter1.setText(namaDokter1.getText()+"\n"+"( Jam "+klinik.getJam_mulai()+" - "+klinik.getJam_selesai()+" )"+ "\n"+klinik.getNama_dokter());
                                             break;
                                         case "2" :
                                             dokter = dokter +", "+ klinik.getNama_dokter();
-                                            namaDokter2.setText(namaDokter2.getText()+ " \n"+klinik.getNama_dokter());
+                                            namaDokter2.setText(namaDokter2.getText()+ "\n"+"( Jam "+klinik.getJam_mulai()+" - "+klinik.getJam_selesai()+" )"+  "\n"+klinik.getNama_dokter());
                                             break;
                                         case "3" :
                                             dokter = dokter +", "+ klinik.getNama_dokter();
-                                            namaDokter3.setText(namaDokter3.getText()+ " \n"+klinik.getNama_dokter());
+                                            namaDokter3.setText(namaDokter3.getText()+ "\n"+"( Jam "+klinik.getJam_mulai()+" - "+klinik.getJam_selesai()+" )"+  "\n"+klinik.getNama_dokter());
                                             break;
                                         case "4" :
                                             dokter = dokter +", "+ klinik.getNama_dokter();
-                                            namaDokter4.setText(namaDokter4.getText()+ " \n"+klinik.getNama_dokter());
+                                            namaDokter4.setText(namaDokter4.getText()+ "\n"+"( Jam "+klinik.getJam_mulai()+" - "+klinik.getJam_selesai()+" )"+  "\n"+klinik.getNama_dokter());
                                             break;
                                         case "5" :
                                             dokter = dokter +", "+ klinik.getNama_dokter();
-                                            namaDokter5.setText(namaDokter5.getText()+ " \n"+klinik.getNama_dokter());
+                                            namaDokter5.setText(namaDokter5.getText()+ "\n"+"( Jam "+klinik.getJam_mulai()+" - "+klinik.getJam_selesai()+" )"+  "\n"+klinik.getNama_dokter());
                                             break;
                                     }
                                 }

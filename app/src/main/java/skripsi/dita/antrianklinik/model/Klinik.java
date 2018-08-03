@@ -23,6 +23,15 @@ public class Klinik {
     @SerializedName("hari")
     @Expose
     private String hari;
+
+    @SerializedName("jam_mulai")
+    @Expose
+    private String jam_mulai;
+
+    @SerializedName("jam_selesai")
+    @Expose
+    private String jam_selesai;
+
    /* private String klinik;
     private String jam;
     private String dokter;*/
@@ -53,6 +62,20 @@ public class Klinik {
     }
     public void setHari(String hari) {
         this.hari = hari;
+    }
+
+    public String getJam_mulai() {
+        return jam_mulai;
+    }
+    public void setJam_mulai(String jam_mulai) {
+        this.jam_mulai = jam_mulai;
+    }
+
+    public String getJam_selesai() {
+        return jam_selesai;
+    }
+    public void setJam_selesai(String jam_selesai) {
+        this.jam_selesai = jam_selesai;
     }
 
     public Klinik(){

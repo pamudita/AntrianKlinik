@@ -7,6 +7,8 @@ import android.content.Context;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -14,7 +16,13 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.google.gson.Gson;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import skripsi.dita.antrianklinik.PrefManager;
 import skripsi.dita.antrianklinik.R;
+import skripsi.dita.antrianklinik.model.Antrian;
+import skripsi.dita.antrianklinik.service.ApiService;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -49,6 +57,19 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private void sendRegistrationToServer(String token) {
         // TODO: Implement this method to send token to your app server.
+        PrefManager prefManager = new PrefManager(MyFirebaseMessagingService.this);
+        ApiService.newInstance().getAntrianService()
+                .updatefcm(prefManager.getSpNorm(),token).enqueue(new Callback<Antrian>() {
+            @Override
+            public void onResponse(Call<Antrian> call, Response<Antrian> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Antrian> call, Throwable t) {
+
+            }
+        });
     }
 
 

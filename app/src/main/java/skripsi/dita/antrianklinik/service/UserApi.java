@@ -8,10 +8,7 @@ import retrofit2.http.Field;
 import retrofit2.http.POST;
 import retrofit2.http.Url;
 
-/**
- * Created by Kristiawan on 21/04/18.
- * this class for example
- */
+
 public interface UserApi {
 
     @GET
@@ -30,5 +27,4 @@ public interface UserApi {
                               @Query("norm") String norm,
                               @Query("newpass") String password,
                               @Query("passlama") String passwordLama);
-
 }
