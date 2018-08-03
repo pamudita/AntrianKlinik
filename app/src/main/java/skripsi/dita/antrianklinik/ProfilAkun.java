@@ -1,15 +1,19 @@
 package skripsi.dita.antrianklinik;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.io.IOException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -59,7 +63,7 @@ public class ProfilAkun extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void Tentang(View view){
+    public void Tentang(View view) {
         Intent i = new Intent(ProfilAkun.this, Tentang.class);
         startActivity(i);
     }
@@ -67,6 +71,18 @@ public class ProfilAkun extends AppCompatActivity {
     public void Logout(View view) {
         prefManager.spEditor.clear();
         prefManager.spEditor.commit();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    FirebaseMessaging.getInstance().setAutoInitEnabled(false);
+                    FirebaseInstanceId.getInstance().deleteInstanceId();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
 
         Intent i = new Intent(ProfilAkun.this, Login.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

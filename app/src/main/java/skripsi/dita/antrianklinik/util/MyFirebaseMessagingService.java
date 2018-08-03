@@ -1,26 +1,14 @@
 package skripsi.dita.antrianklinik.util;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.google.gson.Gson;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import skripsi.dita.antrianklinik.PrefManager;
-import skripsi.dita.antrianklinik.R;
 import skripsi.dita.antrianklinik.model.Antrian;
 import skripsi.dita.antrianklinik.service.ApiService;
 

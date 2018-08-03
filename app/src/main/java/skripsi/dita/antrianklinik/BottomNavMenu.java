@@ -1,22 +1,24 @@
 package skripsi.dita.antrianklinik;
 
 import android.annotation.SuppressLint;
-import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.lang.reflect.Field;
@@ -56,7 +58,7 @@ public class BottomNavMenu extends AppCompatActivity {
                     break;
             }
 
-            if (fragment !=null){
+            if (fragment != null) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame_home, fragment);
@@ -70,8 +72,14 @@ public class BottomNavMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_nav_menu);
-
-        FirebaseInstanceId.getInstance().getInstanceId();
+        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
+        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+            @Override
+            public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                Log.d("Bottom", "refreshed "+task.getResult().getToken());
+            }
+        });
+//        Log.d("refresh", FirebaseInstanceId.getInstance().getInstanceId().getResult().getToken().toString());
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -81,7 +89,7 @@ public class BottomNavMenu extends AppCompatActivity {
     }
 
     /**
-     *0 Navigation Helper
+     * 0 Navigation Helper
      */
     private static class BottomNavigationViewHelper {
         @SuppressLint("RestrictedApi")

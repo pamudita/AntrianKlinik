@@ -1,13 +1,11 @@
 package skripsi.dita.antrianklinik;
 
-import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +42,7 @@ public class Login extends AppCompatActivity {
             }
 
         });
+
     }
 
     public void Daftar(View view){
